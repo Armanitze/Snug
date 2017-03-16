@@ -16,6 +16,10 @@
 		13E6AEF11E545AAE00A36214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E6AEF01E545AAE00A36214 /* Assets.xcassets */; };
 		13E6AEF41E545AAE00A36214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E6AEF21E545AAE00A36214 /* LaunchScreen.storyboard */; };
 		13E6AF001E54683B00A36214 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13E6AEFF1E54683B00A36214 /* GoogleService-Info.plist */; };
+		13FAF6541E787B4E0066637C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAF6531E787B4E0066637C /* DataService.swift */; };
+		13FAF6581E788F7F0066637C /* SignOutCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAF6571E788F7F0066637C /* SignOutCode.swift */; };
+		13FAF65A1E795CEF0066637C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAF6591E795CEF0066637C /* UsersViewController.swift */; };
+		13FAF65C1E79627E0066637C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FAF65B1E79627E0066637C /* SignUpViewController.swift */; };
 		A61B7C8C1DA519654AB44BA4 /* Pods_Snug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801D50E6EAC3C492BEC78318 /* Pods_Snug.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		13E6AEF31E545AAE00A36214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13E6AEF51E545AAE00A36214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E6AEFF1E54683B00A36214 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13FAF6531E787B4E0066637C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		13FAF6571E788F7F0066637C /* SignOutCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutCode.swift; sourceTree = "<group>"; };
+		13FAF6591E795CEF0066637C /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		13FAF65B1E79627E0066637C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		51D437E530CBFB6DDDB54E1E /* Pods-Snug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snug.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snug/Pods-Snug.release.xcconfig"; sourceTree = "<group>"; };
 		72581EB7841A8DA4423867D9 /* Pods-Snug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snug/Pods-Snug.debug.xcconfig"; sourceTree = "<group>"; };
 		801D50E6EAC3C492BEC78318 /* Pods_Snug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,12 +81,16 @@
 				13E6AEEB1E545AAE00A36214 /* ViewController.swift */,
 				137FC0591E78346C0033656A /* gradients.swift */,
 				137FC0571E7833940033656A /* LoginVC.swift */,
+				13FAF65B1E79627E0066637C /* SignUpViewController.swift */,
 				13DDC4851E66D32400E8623A /* String+Extension.swift */,
+				13FAF6591E795CEF0066637C /* UsersViewController.swift */,
 				13E6AEED1E545AAE00A36214 /* Main.storyboard */,
 				13E6AEF01E545AAE00A36214 /* Assets.xcassets */,
 				13E6AEF21E545AAE00A36214 /* LaunchScreen.storyboard */,
 				13E6AEF51E545AAE00A36214 /* Info.plist */,
 				13E6AEFF1E54683B00A36214 /* GoogleService-Info.plist */,
+				13FAF6571E788F7F0066637C /* SignOutCode.swift */,
+				13FAF6531E787B4E0066637C /* DataService.swift */,
 			);
 			path = Snug;
 			sourceTree = "<group>";
@@ -227,8 +239,12 @@
 				137FC05A1E78346C0033656A /* gradients.swift in Sources */,
 				13E6AEEC1E545AAE00A36214 /* ViewController.swift in Sources */,
 				13DDC4861E66D32400E8623A /* String+Extension.swift in Sources */,
+				13FAF6541E787B4E0066637C /* DataService.swift in Sources */,
 				137FC0581E7833940033656A /* LoginVC.swift in Sources */,
+				13FAF65A1E795CEF0066637C /* UsersViewController.swift in Sources */,
+				13FAF65C1E79627E0066637C /* SignUpViewController.swift in Sources */,
 				13E6AEEA1E545AAE00A36214 /* AppDelegate.swift in Sources */,
+				13FAF6581E788F7F0066637C /* SignOutCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

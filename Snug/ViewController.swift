@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var lngLabel: UILabel!
     @IBOutlet weak var latLabel: UILabel!
-
+    
+   
     
     
     let sessionRef = FIRDatabase.database().reference().child("sessions")
@@ -30,9 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // UI Gradients
-        gradient.frame = self.view.frame
-        background.layer.addSublayer(gradient)
+        
 
         
         map.isUserInteractionEnabled = false

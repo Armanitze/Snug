@@ -32,11 +32,13 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - KeychainSwift (7.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - KeychainSwift
 
 SPEC CHECKSUMS:
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
@@ -47,7 +49,8 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
 
-PODFILE CHECKSUM: a506a9acc8e415404529212746b9a0a39b12c7ab
+PODFILE CHECKSUM: d3cc6568da36681681dcf74fdac51fe294229395
 
 COCOAPODS: 1.1.1
