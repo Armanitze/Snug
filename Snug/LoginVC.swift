@@ -32,16 +32,12 @@ class loginVC: UIViewController {
         
     }
     
-    func CompleteSignIn(id: String){
-        let keyChain = DataService().keyChain
-        keyChain.set(id, forKey: "uid")
-    }
     
     @IBAction func SignIn(_ sender: Any){
         if let email = emailField.text, let password = passwordField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil {
-                    self.CompleteSignIn(id: user!.uid)
+                    UserDefaults.standard.set(user!.uid, forKey: "uid")
                     self.performSegue(withIdentifier: "SignIn", sender: nil)
                 } else {
                     if error != nil {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UsersViewController: UIViewController {
     
@@ -22,8 +23,19 @@ class UsersViewController: UIViewController {
             UserDefaults.standard.set(uuid, forKey: "uuid")
         }
         
+        
     }
+    @IBAction func SignOut(_ sender: Any) {
+        
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        DataService().keyChain.delete("uid")
+        dismiss(animated: true, completion: nil)
 
-    
-    
+}
 }

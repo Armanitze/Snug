@@ -22,35 +22,34 @@ class ViewController: UIViewController {
     
    
     
+    var userRef: FIRDatabaseReference!
+    var watchingRef: FIRDatabaseReference?
     
-    let sessionRef = FIRDatabase.database().reference().child("sessions")
     let loctionManager = CLLocationManager()
-    let gradient = gradients()
-    var uuid: String!
+    var uid: String!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
-        
         map.isUserInteractionEnabled = false
         
-        if let uuid = UserDefaults.standard.value(forKey: "uuid") as? String {
-            self.uuid = uuid
-        } else {
-            self.uuid = String.randomString(length: 32)
-            UserDefaults.standard.set(uuid, forKey: "uuid")
-        }
+        uid = UserDefaults.standard.string(forKey: "uid")!
+        
+        userRef = FIRDatabase.database().reference().child("sessions/\(uid!)")
         
         loctionManager.requestAlwaysAuthorization()
         loctionManager.delegate = self
         loctionManager.startUpdatingLocation()
         
+    }
+    
+    @IBAction func startWatching(_ sender: Any) {
         
-        let userRef = sessionRef.child("scN82whVK1pQSUMiaa1C7ThTbKQCefta")
+        watchingRef = FIRDatabase.database().reference().child("sessions/185kB1sHuhO74OKrkrQVWzaLlbi2")
         
-        userRef.observe(.value, with: { [unowned self] snapshot in
+        watchingRef!.observe(.value, with: { [unowned self] snapshot in
             let snapshotValue = snapshot.value as! [String: AnyObject]
             let lat = snapshotValue["lat"] as! Double
             let lng = snapshotValue["lng"] as! Double
@@ -72,12 +71,11 @@ class ViewController: UIViewController {
 
     
     func userUpdated(location: CLLocation) {
-        let newSession = sessionRef.child(uuid)
         let info = [
             "lat": location.coordinate.latitude,
             "lng": location.coordinate.longitude
         ]
-        newSession.setValue(info)
+        userRef.setValue(info)
     }
     
 }
@@ -88,7 +86,6 @@ extension ViewController: CLLocationManagerDelegate {
         guard let userLocation = locations.last else { return }
         print(locations)
         userUpdated(location: userLocation)
-        
     }
     
 }

@@ -11,4 +11,5 @@ target 'Snug' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'KeychainSwift'
+  pod 'Firebase/Storage'
 end
