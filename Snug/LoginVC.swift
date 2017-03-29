@@ -23,12 +23,6 @@ class loginVC: UIViewController {
     
     override func viewDidLoad () {
         super.viewDidLoad()
-       
-        let keyChain = DataService().keyChain
-
-        if keyChain.get ("uid") != nil {
-            performSegue(withIdentifier: "SignIn", sender: nil)
-        }
         
     }
     

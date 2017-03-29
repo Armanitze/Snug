@@ -60,6 +60,7 @@ class ViewController: UIViewController {
             self.latLabel.text = "\(lat)"
             self.lngLabel.text = "\(lng)"
             
+            
         })
     }
     

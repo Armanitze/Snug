@@ -16,13 +16,9 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let uuid = UserDefaults.standard.value(forKey: "uuid") as? String {
-            self.uuid = uuid
-        } else {
-            self.uuid = String.randomString(length: 32)
-            UserDefaults.standard.set(uuid, forKey: "uuid")
-        }
-        
+        uuid = UserDefaults.standard.value(forKey: "uuid") as! String
+        print(uuid)
+    
         
     }
     @IBAction func SignOut(_ sender: Any) {
@@ -31,11 +27,10 @@ class UsersViewController: UIViewController {
         do {
             try firebaseAuth?.signOut()
         } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+            print ("Error signing out: \(signOutError)")
         }
         
-        DataService().keyChain.delete("uid")
         dismiss(animated: true, completion: nil)
 
-}
+    }
 }
