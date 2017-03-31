@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		137FC0581E7833940033656A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FC0571E7833940033656A /* LoginVC.swift */; };
-		1392FCDC1E7C1D3A00934DD3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392FCDB1E7C1D3A00934DD3 /* NetworkingService.swift */; };
 		1392FCDE1E7C1F5800934DD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392FCDD1E7C1F5800934DD3 /* User.swift */; };
 		13C857201E8B883500457F85 /* EmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8571F1E8B883500457F85 /* EmailTableViewController.swift */; };
-		13DDC4861E66D32400E8623A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDC4851E66D32400E8623A /* String+Extension.swift */; };
 		13E6AEEA1E545AAE00A36214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E6AEE91E545AAE00A36214 /* AppDelegate.swift */; };
 		13E6AEEC1E545AAE00A36214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E6AEEB1E545AAE00A36214 /* ViewController.swift */; };
 		13E6AEEF1E545AAE00A36214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E6AEED1E545AAE00A36214 /* Main.storyboard */; };
@@ -26,10 +24,8 @@
 
 /* Begin PBXFileReference section */
 		137FC0571E7833940033656A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		1392FCDB1E7C1D3A00934DD3 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		1392FCDD1E7C1F5800934DD3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		13C8571F1E8B883500457F85 /* EmailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTableViewController.swift; sourceTree = "<group>"; };
-		13DDC4851E66D32400E8623A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		13E6AEE61E545AAE00A36214 /* Snug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E6AEE91E545AAE00A36214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E6AEEB1E545AAE00A36214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,12 +86,10 @@
 			children = (
 				13E6AEE91E545AAE00A36214 /* AppDelegate.swift */,
 				13E6AEEB1E545AAE00A36214 /* ViewController.swift */,
-				13C697481E828C5800E83304 /* Login,signup */,
-				13DDC4851E66D32400E8623A /* String+Extension.swift */,
-				13C8571F1E8B883500457F85 /* EmailTableViewController.swift */,
-				1392FCDB1E7C1D3A00934DD3 /* NetworkingService.swift */,
-				1392FCDD1E7C1F5800934DD3 /* User.swift */,
 				13FAF6591E795CEF0066637C /* UsersViewController.swift */,
+				13C697481E828C5800E83304 /* Login,signup */,
+				13C8571F1E8B883500457F85 /* EmailTableViewController.swift */,
+				1392FCDD1E7C1F5800934DD3 /* User.swift */,
 				13FAF6531E787B4E0066637C /* DataService.swift */,
 				13E6AEED1E545AAE00A36214 /* Main.storyboard */,
 				13EEC9821E8177530017414F /* Assets.xcassets */,
@@ -248,11 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E6AEEC1E545AAE00A36214 /* ViewController.swift in Sources */,
-				13DDC4861E66D32400E8623A /* String+Extension.swift in Sources */,
 				13C857201E8B883500457F85 /* EmailTableViewController.swift in Sources */,
 				13FAF6541E787B4E0066637C /* DataService.swift in Sources */,
 				137FC0581E7833940033656A /* LoginVC.swift in Sources */,
-				1392FCDC1E7C1D3A00934DD3 /* NetworkingService.swift in Sources */,
 				13FAF65A1E795CEF0066637C /* UsersViewController.swift in Sources */,
 				13FAF65C1E79627E0066637C /* SignUpViewController.swift in Sources */,
 				13E6AEEA1E545AAE00A36214 /* AppDelegate.swift in Sources */,

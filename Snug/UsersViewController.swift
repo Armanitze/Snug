@@ -16,11 +16,12 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        uuid = UserDefaults.standard.value(forKey: "uuid") as! String
+        uuid = UserDefaults.standard.value(forKey: "uid") as! String
         print(uuid)
     
         
     }
+    
     @IBAction func SignOut(_ sender: Any) {
         
         let firebaseAuth = FIRAuth.auth()

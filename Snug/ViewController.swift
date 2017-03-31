@@ -37,17 +37,17 @@ class ViewController: UIViewController {
         
         uid = UserDefaults.standard.string(forKey: "uid")!
         
-        userRef = FIRDatabase.database().reference().child("sessions/\(uid!)")
+        userRef = FIRDatabase.database().reference().child("users/\(uid!)")
         
         loctionManager.requestAlwaysAuthorization()
         loctionManager.delegate = self
         loctionManager.startUpdatingLocation()
-        
+                
     }
     
     @IBAction func startWatching(_ sender: Any) {
         
-        watchingRef = FIRDatabase.database().reference().child("sessions/185kB1sHuhO74OKrkrQVWzaLlbi2")
+        watchingRef = FIRDatabase.database().reference().child("users/LNWsz3phkNOwxLk5yH7TXc5J08k1")
         
         watchingRef!.observe(.value, with: { [unowned self] snapshot in
             let snapshotValue = snapshot.value as! [String: AnyObject]
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
             "lat": location.coordinate.latitude,
             "lng": location.coordinate.longitude
         ]
-        userRef.setValue(info)
+        userRef.updateChildValues(info)
     }
     
 }
@@ -85,7 +85,6 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let userLocation = locations.last else { return }
-        print(locations)
         userUpdated(location: userLocation)
     }
     

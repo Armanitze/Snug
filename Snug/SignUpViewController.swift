@@ -18,31 +18,50 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    let networkingService = NetworkingService()
     
    
 
     
     @IBAction func SignUp(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text{
-            FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
-                if error != nil {
-                    print ("Can Not Sign In")
-                } else {
-                    self.dismiss(animated: true, completion: nil)
-                    print(user?.uid)
+            FIRAuth.auth()?.createUser(withEmail: email, password: password) { user, error in
+                
+                guard let user = user else {
+                    print ("Can Not Sign Up")
+                    return
                 }
+                
+                self.createUserInDatabase(for: user)
                 
             }
         }
         
-        let data = UIImageJPEGRepresentation(self.userImageView.image!, 0.8  )
+        //let data = UIImageJPEGRepresentation(self.userImageView.image!, 0.8  )
         
-        networkingService.signUp(email: emailTextField.text!, username: usernameTextField.text!, password: passwordTextField.text!, data: data as NSData!)
     }
 
-    @IBAction func CancelDidTapped(_ sender: Any) {
     
+    func createUserInDatabase(for user: FIRUser) {
+        let userRef = FIRDatabase.database().reference().child("users/\(user.uid)")
+        
+        let newUserInfo: [String: Any] = [
+            "email": user.email!,
+            "username": usernameTextField.text!,
+            "lat": 000,
+            "lng": 000
+        ]
+        
+        userRef.setValue(newUserInfo, withCompletionBlock: { error, ref in
+            if error == nil {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                print(error)
+            }
+        })
+    }
+    
+    
+    @IBAction func CancelDidTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     

@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class EmailTableViewController: UITableViewController, UISearchResultsUpdating {
 
-    var emails = ["richardmchugh123@hotmail.co.uk", "armanitz@me.com", "abc@me.com", "ollyboon@me.com"]
+    var emails = ["Email"]
     var filteredEmails = [String]()
     
-    
+
     var searchController : UISearchController!
     
     var resultsController = UITableViewController()
@@ -48,7 +50,7 @@ class EmailTableViewController: UITableViewController, UISearchResultsUpdating {
         }
         
         // Update the results TableView
-        
+        self.resultsController.tableView.reloadData()
         
     }
     
