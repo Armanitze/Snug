@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1345348B1E8E97D800BF0295 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345348A1E8E97D800BF0295 /* UserManager.swift */; };
 		137FC0581E7833940033656A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FC0571E7833940033656A /* LoginVC.swift */; };
 		1392FCDE1E7C1F5800934DD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392FCDD1E7C1F5800934DD3 /* User.swift */; };
-		13C857201E8B883500457F85 /* EmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8571F1E8B883500457F85 /* EmailTableViewController.swift */; };
+		13C857201E8B883500457F85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8571F1E8B883500457F85 /* SearchViewController.swift */; };
+		13E46D4D1E94041200C6FA16 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E46D4C1E94041200C6FA16 /* CustomTableViewCell.swift */; };
 		13E6AEEA1E545AAE00A36214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E6AEE91E545AAE00A36214 /* AppDelegate.swift */; };
 		13E6AEEC1E545AAE00A36214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E6AEEB1E545AAE00A36214 /* ViewController.swift */; };
 		13E6AEEF1E545AAE00A36214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E6AEED1E545AAE00A36214 /* Main.storyboard */; };
@@ -23,9 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1345348A1E8E97D800BF0295 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		137FC0571E7833940033656A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1392FCDD1E7C1F5800934DD3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		13C8571F1E8B883500457F85 /* EmailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTableViewController.swift; sourceTree = "<group>"; };
+		13C8571F1E8B883500457F85 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		13E46D4C1E94041200C6FA16 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		13E6AEE61E545AAE00A36214 /* Snug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E6AEE91E545AAE00A36214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E6AEEB1E545AAE00A36214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,9 @@
 				13E6AEEB1E545AAE00A36214 /* ViewController.swift */,
 				13FAF6591E795CEF0066637C /* UsersViewController.swift */,
 				13C697481E828C5800E83304 /* Login,signup */,
-				13C8571F1E8B883500457F85 /* EmailTableViewController.swift */,
+				13C8571F1E8B883500457F85 /* SearchViewController.swift */,
+				13E46D4C1E94041200C6FA16 /* CustomTableViewCell.swift */,
+				1345348A1E8E97D800BF0295 /* UserManager.swift */,
 				1392FCDD1E7C1F5800934DD3 /* User.swift */,
 				13FAF6531E787B4E0066637C /* DataService.swift */,
 				13E6AEED1E545AAE00A36214 /* Main.storyboard */,
@@ -241,11 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1345348B1E8E97D800BF0295 /* UserManager.swift in Sources */,
 				13E6AEEC1E545AAE00A36214 /* ViewController.swift in Sources */,
-				13C857201E8B883500457F85 /* EmailTableViewController.swift in Sources */,
+				13C857201E8B883500457F85 /* SearchViewController.swift in Sources */,
 				13FAF6541E787B4E0066637C /* DataService.swift in Sources */,
 				137FC0581E7833940033656A /* LoginVC.swift in Sources */,
 				13FAF65A1E795CEF0066637C /* UsersViewController.swift in Sources */,
+				13E46D4D1E94041200C6FA16 /* CustomTableViewCell.swift in Sources */,
 				13FAF65C1E79627E0066637C /* SignUpViewController.swift in Sources */,
 				13E6AEEA1E545AAE00A36214 /* AppDelegate.swift in Sources */,
 				1392FCDE1E7C1F5800934DD3 /* User.swift in Sources */,

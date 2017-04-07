@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(UserManager.shared.users)
+        
         map.isUserInteractionEnabled = false
         
         uid = UserDefaults.standard.string(forKey: "uid")!
@@ -47,7 +49,7 @@ class ViewController: UIViewController {
     
     @IBAction func startWatching(_ sender: Any) {
         
-        watchingRef = FIRDatabase.database().reference().child("users/LNWsz3phkNOwxLk5yH7TXc5J08k1")
+        watchingRef = FIRDatabase.database().reference().child("users/aKZ49Lm9oSZvXZtfS94g14QbCml1")
         
         watchingRef!.observe(.value, with: { [unowned self] snapshot in
             let snapshotValue = snapshot.value as! [String: AnyObject]
