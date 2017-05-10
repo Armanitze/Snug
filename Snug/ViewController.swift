@@ -23,6 +23,7 @@ class ViewController: UIViewController {
    
     
     var userRef: FIRDatabaseReference!
+    var watchUser: User!
     var watchingRef: FIRDatabaseReference?
     
     let loctionManager = CLLocationManager()
@@ -33,6 +34,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loctionManager.requestAlwaysAuthorization()
+        loctionManager.delegate = self
+        loctionManager.startUpdatingLocation()
+        
         print(UserManager.shared.users)
         
         map.isUserInteractionEnabled = false
@@ -41,15 +46,14 @@ class ViewController: UIViewController {
         
         userRef = FIRDatabase.database().reference().child("users/\(uid!)")
         
-        loctionManager.requestAlwaysAuthorization()
-        loctionManager.delegate = self
-        loctionManager.startUpdatingLocation()
-                
-    }
-    
-    @IBAction func startWatching(_ sender: Any) {
+        startWatching()
         
-        watchingRef = FIRDatabase.database().reference().child("users/aKZ49Lm9oSZvXZtfS94g14QbCml1")
+    }
+
+    
+    func startWatching() {
+        
+        watchingRef = FIRDatabase.database().reference().child("users/\(watchUser.key!)")
         
         watchingRef!.observe(.value, with: { [unowned self] snapshot in
             let snapshotValue = snapshot.value as! [String: AnyObject]
@@ -61,10 +65,11 @@ class ViewController: UIViewController {
             
             self.latLabel.text = "\(lat)"
             self.lngLabel.text = "\(lng)"
-            
-            
         })
+        
     }
+    
+    
     
     func setMapRegion(for location: CLLocationCoordinate2D, animated: Bool) {
         let viewRegion = MKCoordinateRegionMakeWithDistance(location, 500, 500)
@@ -80,6 +85,8 @@ class ViewController: UIViewController {
         ]
         userRef.updateChildValues(info)
     }
+    
+    
     
 }
 

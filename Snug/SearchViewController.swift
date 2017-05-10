@@ -55,27 +55,27 @@ class SearchViewController: UITableViewController {
     }
  
 
-//    func updateSearchResults(for searchController: UISearchController) {
-//        
-//        // Filter through the emails
-//
-//        self.filteredEmails = self.emails.filter { (email:String) -> Bool in
-//            if email.contains(self.searchController.searchBar.text!){
-//                self.tableView.reloadData()
-//                return true
-//                
-//            } else {
-//                self.tableView.reloadData()
-//                return false
-//            }
-//        }
-//        
-//        // Update the results TableView
-//        self.resultsController.tableView.reloadData()
-//        
-//    }
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        // Filter through the emails
+
+        self.filteredEmails = self.emails.filter { (email:String) -> Bool in
+            if email.contains(self.searchController.searchBar.text!){
+                self.tableView.reloadData()
+                return true
+                
+            } else {
+                self.tableView.reloadData()
+                return false
+            }
+        }
+        
+        // Update the results TableView
+        self.resultsController.tableView.reloadData()
+        
+    }
     
-    // MARK: - Table view data source
+     //MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -96,6 +96,17 @@ class SearchViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = UserManager.shared.users[indexPath.row]
+        performSegue(withIdentifier: "showMap", sender: user)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destination = segue.destination as! ViewController
+            destination.watchUser = sender as! User
+        }
+    }
 
 }
 
