@@ -69,10 +69,23 @@ class ViewController: UIViewController {
         
     }
     
+
     
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            let info = [
+                "impact": true
+               
+                
+            ]
+            userRef.updateChildValues(info)
+        }
+    }
+    
+
     
     func setMapRegion(for location: CLLocationCoordinate2D, animated: Bool) {
-        let viewRegion = MKCoordinateRegionMakeWithDistance(location, 500, 500)
+        let viewRegion = MKCoordinateRegionMakeWithDistance(location, 200, 200)
         map.setRegion(viewRegion, animated: animated)
     }
 

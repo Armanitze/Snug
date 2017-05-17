@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="t" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-ba-eGr">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-ba-eGr">
                                         <rect key="frame" x="0.0" y="0.0" width="471" height="799"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -220,54 +220,6 @@
             </objects>
             <point key="canvasLocation" x="-983.20000000000005" y="781.25937031484261"/>
         </scene>
-        <!--User Profile View Controller-->
-        <scene sceneID="wTm-tf-hF0">
-            <objects>
-                <viewController id="1tj-n4-GS3" customClass="UserProfileViewController" customModule="Snug" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y23-hT-FYq"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ik3-q6-KJs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KmO-QA-0Tw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZn-v8-9kk">
-                                <rect key="frame" x="37" y="282" width="322" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjX-Ly-bZ5">
-                                <rect key="frame" x="68" y="430" width="238" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="save"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-Rf-VJh">
-                                <rect key="frame" x="165" y="493" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Delete"/>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="in1-B4-tZj">
-                                <rect key="frame" x="37" y="324" width="322" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arman" translatesAutoresizingMaskIntoConstraints="NO" id="en8-1L-m4D">
-                                <rect key="frame" x="114" y="115" width="146" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ABU-ae-XFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="36" y="1047.5262368815593"/>
-        </scene>
         <!--Search View Controller-->
         <scene sceneID="MEd-SU-jiZ">
             <objects>
@@ -337,37 +289,23 @@
                                     <action selector="SignOut:" destination="u24-hA-9sb" eventType="touchUpInside" id="Ox0-d2-9Rk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-OU-1fp">
-                                <rect key="frame" x="6" y="217" width="139" height="95"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Find Your Friend" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGE-1N-0J6">
+                                <rect key="frame" x="100" y="574" width="175" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Track!" image="MAP">
-                                    <color key="titleColor" red="0.3378254295" green="0.72428776530000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-19-l96">
-                                <rect key="frame" x="23" y="346" width="87" height="85"/>
+                                <rect key="frame" x="16" y="296" width="353" height="278"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search" image="s">
+                                <state key="normal" title="Search" image="srachmap">
                                     <color key="titleColor" red="0.14954725690000001" green="0.65078314410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="h8a-fO-SR5" kind="show" id="DQk-Pr-sgD"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Search Your Emails!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGE-1N-0J6">
-                                <rect key="frame" x="118" y="372" width="175" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Check by the MAP!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-0J-2T0">
-                                <rect key="frame" x="125" y="245" width="175" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98281138069999996" blue="0.98518992380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -377,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GlV-FB-CeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="-367"/>
+            <point key="canvasLocation" x="-191.19999999999999" y="-367.46626686656674"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -402,7 +340,7 @@
                                             <color key="titleColor" red="1" green="0.98281138069999996" blue="0.98518992380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDK-a1-JD5">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDK-a1-JD5">
                                         <rect key="frame" x="14" y="199" width="347" height="434"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </mapView>
@@ -457,8 +395,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MAP" width="600" height="400"/>
-        <image name="arman" width="637" height="637"/>
         <image name="imageView:iBc-Ef-860:image" width="674" height="440">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
@@ -20284,8 +20220,9 @@ ABIj5AASI+cAEiPsABIj+wASI/8AEiQGABIkDgASJBsAEiQgABIkIgASJCQAEiQpABIkMQASJDQAEiQ5
 ABIkQQASJEQAEiRWABIkWQASJF4AAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAABIkYA
 </mutableData>
         </image>
+        <image name="new" width="500" height="400"/>
         <image name="pn" width="2480" height="3508"/>
-        <image name="s" width="256" height="256"/>
+        <image name="srachmap" width="1150" height="915"/>
         <image name="sw" width="2480" height="3508"/>
         <image name="t" width="842" height="486"/>
     </resources>
