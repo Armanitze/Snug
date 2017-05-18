@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lngLabel: UILabel!
     @IBOutlet weak var latLabel: UILabel!
     
+    @IBOutlet weak var active: UILabel!
    
     
     var userRef: FIRDatabaseReference!
@@ -69,19 +70,44 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    
 
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
+            
+            
             let info = [
                 "impact": true
                
                 
             ]
+            self.active.text = "SOS"
+            
             userRef.updateChildValues(info)
+            
+            
+            
         }
     }
     
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        
+        if motion == .motionShake {
+            
+            let controller = UIAlertController(title: "Warning", message: "This user had an accident", preferredStyle: .alert)
+            
+            controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            
+            present(controller, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+ 
 
     
     func setMapRegion(for location: CLLocationCoordinate2D, animated: Bool) {
