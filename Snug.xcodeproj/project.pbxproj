@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13401A3F1ED0CF27006515C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13401A3E1ED0CF27006515C3 /* SecondViewController.swift */; };
+		13401A411ED0D72F006515C3 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13401A401ED0D72F006515C3 /* CircularTransition.swift */; };
 		1345348B1E8E97D800BF0295 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345348A1E8E97D800BF0295 /* UserManager.swift */; };
-		136235B31EC3190B0012B7E2 /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136235B21EC3190B0012B7E2 /* AccelerometerViewController.swift */; };
 		137FC0581E7833940033656A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FC0571E7833940033656A /* LoginVC.swift */; };
 		1392FCDE1E7C1F5800934DD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1392FCDD1E7C1F5800934DD3 /* User.swift */; };
 		13C857201E8B883500457F85 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C8571F1E8B883500457F85 /* SearchViewController.swift */; };
@@ -26,8 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13401A3E1ED0CF27006515C3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		13401A401ED0D72F006515C3 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		1345348A1E8E97D800BF0295 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		136235B21EC3190B0012B7E2 /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
 		137FC0571E7833940033656A /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1392FCDD1E7C1F5800934DD3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		13C8571F1E8B883500457F85 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +94,9 @@
 			children = (
 				13E6AEE91E545AAE00A36214 /* AppDelegate.swift */,
 				13E6AEEB1E545AAE00A36214 /* ViewController.swift */,
-				136235B21EC3190B0012B7E2 /* AccelerometerViewController.swift */,
 				13FAF6591E795CEF0066637C /* UsersViewController.swift */,
+				13401A3E1ED0CF27006515C3 /* SecondViewController.swift */,
+				13401A401ED0D72F006515C3 /* CircularTransition.swift */,
 				13C697481E828C5800E83304 /* Login,signup */,
 				13C8571F1E8B883500457F85 /* SearchViewController.swift */,
 				13E46D4C1E94041200C6FA16 /* CustomTableViewCell.swift */,
@@ -250,14 +253,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13401A3F1ED0CF27006515C3 /* SecondViewController.swift in Sources */,
 				1345348B1E8E97D800BF0295 /* UserManager.swift in Sources */,
 				13E6AEEC1E545AAE00A36214 /* ViewController.swift in Sources */,
 				13C857201E8B883500457F85 /* SearchViewController.swift in Sources */,
 				13FAF6541E787B4E0066637C /* DataService.swift in Sources */,
 				137FC0581E7833940033656A /* LoginVC.swift in Sources */,
 				13FAF65A1E795CEF0066637C /* UsersViewController.swift in Sources */,
+				13401A411ED0D72F006515C3 /* CircularTransition.swift in Sources */,
 				13E46D4D1E94041200C6FA16 /* CustomTableViewCell.swift in Sources */,
-				136235B31EC3190B0012B7E2 /* AccelerometerViewController.swift in Sources */,
 				13FAF65C1E79627E0066637C /* SignUpViewController.swift in Sources */,
 				13E6AEEA1E545AAE00A36214 /* AppDelegate.swift in Sources */,
 				1392FCDE1E7C1F5800934DD3 /* User.swift in Sources */,
